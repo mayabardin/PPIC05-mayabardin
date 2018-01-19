@@ -2,7 +2,7 @@
 #
 # pp. 163, 165, 166
 #
-
+#float is how we compare decimals
 """
 5.1 Write a program to read the 'rainfall.txt' file and the write out a 
 new file called 'rainfallfmt.txt'. The new file should format each 
@@ -11,6 +11,14 @@ characters wide, and the rainfall data should be printed in a a field
 that is 5 characters wide with 1 digit to the right of the decimal 
 point.
 """
+data_file = open('rainfall.txt', 'r') #'r' means "read"
+data_file = open('rainfall.txt', 'r') #'r' means "read"
+for aline in data_file:
+	row = aline.strip().split()
+
+	#print(row[0] + ' had ' + row[1] + ' inches of rain')
+	#print('%s had %s inches of rain!' % (row[0], row[1]))
+	print('%-25s %5.1f' % (row[0], float(row[1])) )
 
 
 
@@ -22,11 +30,25 @@ columns with appropriate headings. Each collumn should be 10
 characters wide, and each temperature should have 3 digits to the 
 right of the decimal point.
 """
+def func():
+	maya = open('degreestocelcius.txt', 'w')
+	f = -301
+	for x in range(513):
+	    f = f + 1 
+	    c = (f - 32)*(5/9)
+	    temps = '%s %10.3f' % (f, c)
+	    maya.write(temps)
+	    maya.write('\n')
+
+func()
+
+
+
 
 
 
 """
-5.3 Open a file during a Pyhton session. Call the 'readline' method twice 
+5.3 Open a file during a Python session. Call the 'readline' method twice 
 on that file, then call the 'readlines' method. What lines does the 
 list reurned by 'readlines' include?
 """
