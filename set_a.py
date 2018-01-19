@@ -11,8 +11,8 @@ characters wide, and the rainfall data should be printed in a a field
 that is 5 characters wide with 1 digit to the right of the decimal 
 point.
 """
-data_file = open('rainfall.txt', 'r') #'r' means "read"
-data_file = open('rainfall.txt', 'r') #'r' means "read"
+data_file = open('rainfall', 'r') #'r' means "read"
+data_file = open('rainfall', 'r') #'r' means "read"
 for aline in data_file:
 	row = aline.strip().split()
 
@@ -53,7 +53,7 @@ on that file, then call the 'readlines' method. What lines does the
 list reurned by 'readlines' include?
 """
 
-
+#it returns an empty list
 
 """
 5.4 Open the file in Exercise 5.3 again, but call 'readlines' 
