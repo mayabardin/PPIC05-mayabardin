@@ -79,20 +79,22 @@ for aline in data_file:
 of lines, words, and characters in the file.
 """
 myfile = open('CupcakeIpsum', 'r')
-num_lines = 0 
-num_words = 0
-num_letters = 0
-for line in myfile:
-	lines = 1
-
-
-
-	
-	print(line.split())
-
-
+lines = 0 
+#num_words = 0
+characters = 0
+for aline in myfile:
+	lines += 1
 
 myfile.close()
+reader = open('CupcakeIpsum', 'r')
+
+f = reader.read()
+words = f.split()
+word_count = len(words)
+
+for ch in f:
+	characters += 1
+print(' %d, %d, %d' % (lines, word_count, characters))
 
 """
 5.7 Write a program that creates a file with a concordance - an index 
